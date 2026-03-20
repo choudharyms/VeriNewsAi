@@ -8,3 +8,4 @@ newspaper3k
 python-dotenv
 httpx
 lxml_html_clean
+gunicorn

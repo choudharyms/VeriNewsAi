@@ -284,6 +284,13 @@
         </div>
 </div>
 <script>
+    // Global API Configuration
+    const API_CONFIG = {
+        baseUrl: window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1' 
+                 ? '' 
+                 : 'https://verinewsai-backend.onrender.com' // Placeholder: Update this after Render deployment
+    };
+
     const verifyButton = document.getElementById('verify-button');
     const articleInput = document.getElementById('article-input');
 
@@ -304,7 +311,7 @@
             const isUrl = input.startsWith('http');
             const payload = isUrl ? { url: input } : { text: input };
 
-            const response = await fetch('/analyze', {
+            const response = await fetch(`${API_CONFIG.baseUrl}/analyze`, {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
