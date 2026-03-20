@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Space+Grotesk:wght@300..700&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-low": "#fcf9ee",
+              "on-tertiary-fixed": "#000000",
+              "on-error": "#ffffff",
+              "secondary-container": "#ffdbc9",
+              "on-surface-variant": "#656555",
+              "inverse-primary": "#ffffff",
+              "on-error-container": "#742410",
+              "secondary-fixed": "#ffdbc9",
+              "error": "#a54731",
+              "surface-tint": "#5f5e5e",
+              "tertiary": "#aa4243",
+              "error-dim": "#5c1202",
+              "on-background": "#38392b",
+              "primary-fixed": "#e4e2e1",
+              "on-secondary": "#ffffff",
+              "surface-dim": "#e5e4cd",
+              "surface-container-highest": "#eae9d5",
+              "inverse-surface": "#0e0e0a",
+              "secondary": "#9a511e",
+              "tertiary-container": "#f37978",
+              "on-tertiary-container": "#490008",
+              "on-tertiary-fixed-variant": "#5a040f",
+              "surface-container": "#f6f4e5",
+              "outline": "#828171",
+              "outline-variant": "#bbbaa7",
+              "primary": "#5f5e5e",
+              "primary-fixed-dim": "#d6d4d3",
+              "surface-variant": "#eae9d5",
+              "inverse-on-surface": "#9f9d95",
+              "error-container": "#fe8b70",
+              "on-primary-container": "#525151",
+              "surface-container-high": "#f0efdd",
+              "primary-dim": "#535252",
+              "on-secondary-container": "#833f0c",
+              "tertiary-fixed": "#f37978",
+              "on-tertiary": "#ffffff",
+              "surface": "#feffd6",
+              "on-primary-fixed": "#3f3f3f",
+              "on-primary": "#faf7f6",
+              "on-primary-fixed-variant": "#5c5b5b",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-dim": "#9a3638",
+              "on-surface": "#38392b",
+              "surface-bright": "#feffd6",
+              "on-secondary-fixed": "#6a2e00",
+              "tertiary-fixed-dim": "#e26c6c",
+              "on-secondary-fixed-variant": "#8f4816",
+              "primary-container": "#e4e2e1",
+              "secondary-dim": "#8b4513",
+              "secondary-fixed-dim": "#ffc9ab",
+              "background": "#feffd6"
+            },
+            fontFamily: {
+              "headline": ["Newsreader"],
+              "body": ["Space Grotesk"],
+              "label": ["Space Grotesk"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>.noise-bg {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuAGxyiw4TQwyL9jB-ietFtXAYwACzo5uCmrw0CMfPEUK3SLtLyMa5y-26cUo9ePJOcINS_iPhjj4I_sKu30VCtuvGYUlNgh7F-M9bN8DzdzrCgpZANZMXKkGikH6aJKugyvbISvXaGsjt97RdQJUEcmVHwJVhzvU8hECajK9o7Jhpyx9rhKw2e5sI5gE9OUuTV7b1T0bugdbr2BQjG9Ye9f1FvN2roaXKB1CSdt5LnIgHSkxC3wBaTVWjwHcLgvGMo-u1pT07Bp1qs);
+    background-repeat: repeat
+    }
+.typewriter-letter {
+    opacity: 0.08;
+    position: absolute;
+    pointer-events: none;
+    font-family: "Space Grotesk", monospace
+    }
+.ink-bleed {
+    filter: contrast(150%) brightness(90%) blur(0.3px)
+    }
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap
+    }
+.marquee-content {
+    display: inline-block;
+    animation: marquee 40s linear infinite
+    }
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+        } 100% {
+        transform: translateX(-50%);
+        }
+    }</style>
+</head>
+<body class="bg-surface font-body text-on-surface noise-bg min-h-screen relative">
+<!-- Background Decor -->
+<div class="typewriter-letter text-6xl top-20 left-10 rotate-[-15deg]">A</div>
+<div class="typewriter-letter text-5xl top-1/2 right-20 rotate-[10deg]">Z</div>
+<div class="typewriter-letter text-7xl bottom-20 left-1/4 rotate-[5deg]">Q</div>
+<div class="typewriter-letter text-4xl top-1/3 left-10 rotate-[-25deg]">R</div>
+<!-- Top Navigation -->
+<header class="bg-[#feffd6] dark:bg-[#38392b] w-full border-b-4 border-double border-[#bbbaa7]">
+<nav class="flex justify-between items-center px-12 py-6 w-full max-w-screen-2xl mx-auto">
+<div class="flex items-center gap-6">
+<div class="text-3xl font-black text-[#38392b] dark:text-[#feffd6] italic uppercase border-2 border-[#38392b] px-4 py-1 rotate-[-1deg] font-headline">
+                    VeriNewsAI
+                </div>
+<div class="hidden md:flex items-center gap-8 font-serif uppercase tracking-widest Newsreader text-xs">
+<a class="text-[#5f5e5e] dark:text-[#bbbaa7] hover:text-[#38392b] hover:italic transition-all duration-75" href="/archive">The Archive</a>
+<a class="text-[#9a511e] dark:text-[#ffc9ab] underline decoration-wavy underline-offset-8 hover:italic transition-all duration-75" href="/">Verify</a>
+<a class="text-[#5f5e5e] dark:text-[#bbbaa7] hover:text-[#38392b] hover:italic transition-all duration-75" href="#">Wire Service</a>
+<a class="text-[#5f5e5e] dark:text-[#bbbaa7] hover:text-[#38392b] hover:italic transition-all duration-75" href="#">Classifieds</a>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="bg-secondary text-on-secondary px-6 py-2 uppercase tracking-tighter text-sm font-bold rounded-DEFAULT hover:opacity-80 transition-all shadow-sm">
+                    Dispatch
+                </button>
+</div>
+</nav>
+</header>
+<!-- Ticker Tape -->
+<div class="bg-surface-container-highest border-y border-outline-variant py-2 marquee-container">
+<div class="marquee-content flex gap-12 items-center">
+<div class="flex items-center gap-3">
+<span class="font-bold text-[10px] tracking-tighter opacity-50 uppercase">Flash:</span>
+<span class="text-sm font-serif italic">"Global Grain Shortage" - The Daily Wire - </span>
+<span class="bg-tertiary-container text-on-tertiary-container px-2 py-0.5 text-[10px] font-bold rounded-sm border border-tertiary">FABRICATED</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-bold text-[10px] tracking-tighter opacity-50 uppercase">Flash:</span>
+<span class="text-sm font-serif italic">"Market Surge in Mumbai" - Reuters - </span>
+<span class="bg-secondary-fixed-dim text-on-secondary-fixed-variant px-2 py-0.5 text-[10px] font-bold rounded-sm border border-secondary">VERIFIED</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-bold text-[10px] tracking-tighter opacity-50 uppercase">Flash:</span>
+<span class="text-sm font-serif italic">"Unidentified Flying Object over Bihar" - Local Dispatch - </span>
+<span class="bg-surface-variant text-on-surface-variant px-2 py-0.5 text-[10px] font-bold rounded-sm border border-outline">UNVERIFIED</span>
+</div>
+<!-- Duplicate for infinite loop -->
+<div class="flex items-center gap-3">
+<span class="font-bold text-[10px] tracking-tighter opacity-50 uppercase">Flash:</span>
+<span class="text-sm font-serif italic">"Global Grain Shortage" - The Daily Wire - </span>
+<span class="bg-tertiary-container text-on-tertiary-container px-2 py-0.5 text-[10px] font-bold rounded-sm border border-tertiary">FABRICATED</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="font-bold text-[10px] tracking-tighter opacity-50 uppercase">Flash:</span>
+<span class="text-sm font-serif italic">"Market Surge in Mumbai" - Reuters - </span>
+<span class="bg-secondary-fixed-dim text-on-secondary-fixed-variant px-2 py-0.5 text-[10px] font-bold rounded-sm border border-secondary">VERIFIED</span>
+</div>
+</div>
+</div>
+<main class="max-w-screen-xl mx-auto px-6 pt-12 pb-24 relative">
+<!-- Bureau Seal -->
+<div class="absolute top-0 right-10 flex flex-col items-center opacity-30 select-none pointer-events-none">
+<div class="w-24 h-24 border-4 border-primary rounded-full flex items-center justify-center p-2">
+<div class="border-2 border-primary rounded-full w-full h-full flex items-center justify-center text-[10px] font-bold text-center leading-tight uppercase">
+                    Bureau of<br/>Verification
+                </div>
+</div>
+<div class="text-[8px] mt-2 font-bold tracking-widest uppercase">Est. 2026</div>
+</div>
+<!-- Hero Branding -->
+<div class="text-center mb-16">
+<h1 class="font-headline text-7xl md:text-8xl font-black text-on-surface italic mb-4 tracking-tighter">
+                The Truth Ledger
+            </h1>
+<p class="font-mono text-lg uppercase tracking-[0.3em] text-secondary opacity-80">
+                Verified by Principle, Powered by AI
+            </p>
+</div>
+<!-- Telegram Input Section -->
+<div class="relative max-w-4xl mx-auto mt-20">
+<!-- Typewriter Roller Mockup -->
+<div class="absolute -top-12 left-0 right-0 h-16 bg-gradient-to-b from-primary-dim to-on-surface rounded-t-xl z-0 shadow-lg"></div>
+<div class="bg-white p-8 md:p-12 shadow-[0_20px_50px_rgba(0,0,0,0.1)] border-x-[1.5rem] border-surface-container-highest relative z-10 min-h-[500px] flex flex-col ink-bleed">
+<!-- Perforated Top Edge -->
+<div class="absolute top-0 left-0 right-0 h-2 flex gap-1 overflow-hidden opacity-20">
+<div class="w-2 h-2 rounded-full bg-on-surface"></div>
+<div class="w-2 h-2 rounded-full bg-on-surface"></div>
+<div class="w-2 h-2 rounded-full bg-on-surface"></div>
+<!-- Repeat for effect -->
+</div>
+<div class="flex justify-between items-start mb-10 border-b border-outline-variant pb-4">
+<div class="uppercase font-mono text-xs tracking-widest space-y-1">
+<p>Destination: VERIFICATION CENTER</p>
+<p>Origin: UNIDENTIFIED WIRE</p>
+<p>Priority: IMMEDIATE</p>
+</div>
+<div class="text-right">
+<span class="material-symbols-outlined text-4xl opacity-20" style="font-variation-settings: 'FILL' 1;">description</span>
+</div>
+</div>
+<div class="flex-grow">
+<textarea id="article-input" class="w-full h-full bg-transparent border-none focus:ring-0 font-body text-xl md:text-2xl leading-relaxed text-on-surface placeholder:text-outline-variant placeholder:opacity-50 resize-none" placeholder="INSERT ARTICLE TEXT OR WIRE URL HERE FOR IMMEDIATE ANALYSIS..."></textarea>
+</div>
+<!-- Input Actions -->
+<div class="mt-12 flex flex-col md:flex-row gap-6 items-center justify-end">
+<button class="w-full md:w-auto px-10 py-4 bg-surface-container border-2 border-outline-variant text-on-surface font-black uppercase tracking-widest text-lg hover:bg-surface-variant transition-all transform hover:rotate-1 shadow-[4px_4px_0px_#828171]">
+                        PASTE
+                    </button>
+<button id="verify-button" class="w-full md:w-auto px-12 py-4 bg-secondary text-on-secondary font-black uppercase tracking-[0.2em] text-xl hover:opacity-90 transition-all transform hover:-rotate-1 shadow-[6px_6px_0px_#38392b] flex items-center justify-center gap-3">
+                        VERIFY 
+                        <span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</div>
+<!-- Shadow under paper -->
+<div class="absolute -bottom-4 left-4 right-4 h-8 bg-black/5 blur-xl -z-10"></div>
+</div>
+<!-- Secondary Information / Feature Bento -->
+<section class="mt-32 grid grid-cols-1 md:grid-cols-3 gap-12">
+<div class="p-8 border border-outline-variant bg-surface-container-low flex flex-col gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl">history_edu</span>
+<h3 class="font-headline text-2xl font-bold italic">The Archive Access</h3>
+<p class="text-sm leading-relaxed text-on-surface-variant">Access over 1 year of cross-referenced wire reports. Our engine compares current narratives against historical patterns of misinformation.</p>
+<a class="mt-auto text-xs font-bold uppercase tracking-widest text-primary border-b border-primary w-fit hover:text-secondary hover:border-secondary transition-colors" href="#">Consult Records</a>
+</div>
+<div class="p-8 border-4 border-double border-outline bg-surface-container-highest flex flex-col gap-4 relative overflow-hidden">
+<div class="absolute -right-4 -top-4 opacity-10">
+<span class="material-symbols-outlined text-8xl" style="font-variation-settings: 'FILL' 1;">radar</span>
+</div>
+<h3 class="font-headline text-2xl font-bold italic">Wire Pulse</h3>
+<p class="text-sm leading-relaxed text-on-surface-variant">Real-time analysis of global broadcasts. Our AI monitors for statistical anomalies in phrasing and source attribution across 12 languages.</p>
+<div class="mt-auto h-1 w-full bg-outline-variant">
+<div class="h-full bg-secondary w-2/3 ink-bleed"></div>
+</div>
+</div>
+<div class="p-8 border border-outline-variant bg-surface-container-low flex flex-col gap-4">
+<span class="material-symbols-outlined text-secondary text-3xl">verified_user</span>
+<h3 class="font-headline text-2xl font-bold italic">Dispatch Integrity</h3>
+<p class="text-sm leading-relaxed text-on-surface-variant">Every verification is accompanied by a confidence certificate. We don't just find the truth; we document the chain of evidence.</p>
+<a class="mt-auto text-xs font-bold uppercase tracking-widest text-primary border-b border-primary w-fit hover:text-secondary hover:border-secondary transition-colors" href="#">Learn Protocol</a>
+</div>
+</section>
+<!-- Aesthetic Newsletter / Classifieds -->
+<section class="mt-32 border-t-2 border-on-surface pt-12">
+<div class="flex flex-col md:flex-row gap-12">
+<div class="md:w-1/3">
+<h2 class="font-headline text-4xl font-black uppercase leading-none mb-6">Classified Briefings</h2>
+<p class="text-sm italic text-on-surface-variant">Join 50,000+ editors and truth-seekers receiving our weekly dossier on the state of global information.</p>
+</div>
+<div class="md:w-2/3 flex items-end">
+<div class="w-full flex border-b-2 border-on-surface pb-2">
+<input class="flex-grow bg-transparent border-none focus:ring-0 font-mono text-sm uppercase tracking-widest" placeholder="ENTER TELEGRAPHIC ADDRESS..." type="email"/>
+<button class="font-bold uppercase text-sm tracking-widest hover:text-secondary transition-colors">Register</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Component -->
+<footer class="bg-[#fcf9ee] dark:bg-[#2a2b21] w-full border-t-8 border-double border-[#38392b] mt-20">
+<div class="flex flex-col items-center gap-6 py-12 px-8 w-full border-x-[1rem] border-[#eae9d5] max-w-screen-2xl mx-auto">
+<div class="text-lg font-bold text-[#5f5e5e] font-headline uppercase tracking-widest">
+                VeriNewsAI Press
+            </div>
+<div class="flex flex-wrap justify-center gap-8 font-mono text-xs uppercase tracking-tighter Space Grotesk">
+<a class="text-[#828171] hover:text-[#38392b] hover:underline decoration-1" href="#">Editorial Policy</a>
+<a class="text-[#828171] hover:text-[#38392b] hover:underline decoration-1" href="#">Terms of Service</a>
+<a class="text-[#828171] hover:text-[#38392b] hover:underline decoration-1" href="#">Archive Access</a>
+<a class="text-[#828171] hover:text-[#38392b] hover:underline decoration-1" href="#">Contact Editor</a>
+</div>
+<p class="text-[10px] font-mono uppercase tracking-tighter text-[#38392b] opacity-60 text-center max-w-md leading-loose">
+                © 2026 THE VERINEWSAI PRESS - ALL RIGHTS RESERVED - PRINTED IN BOMBAY - AUTHORIZED BY THE CENTRAL BUREAU OF TRUTH
+            </p>
+</div>
+</footer>
+<!-- Decorative Stamp Floating -->
+<div class="fixed bottom-8 left-8 rotate-[-12deg] opacity-20 hover:opacity-100 transition-opacity cursor-help hidden md:block">
+<div class="border-4 border-tertiary-dim p-2 rounded-sm text-tertiary-dim font-black text-xl uppercase tracking-tighter">
+            Strictly<br/>Confidential
+        </div>
+</div>
+<script>
+    const verifyButton = document.getElementById('verify-button');
+    const articleInput = document.getElementById('article-input');
+
+    verifyButton.addEventListener('click', async () => {
+        const input = articleInput.value.trim();
+        if (!input) {
+            alert("Please insert article text or URL.");
+            return;
+        }
+
+        // Visual feedback
+        const originalContent = verifyButton.innerHTML;
+        verifyButton.disabled = true;
+        verifyButton.innerHTML = 'DISPATCHING...';
+        verifyButton.classList.add('opacity-50');
+
+        try {
+            const isUrl = input.startsWith('http');
+            const payload = isUrl ? { url: input } : { text: input };
+
+            const response = await fetch('/analyze', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify(payload),
+            });
+
+            if (!response.ok) {
+                const errorData = await response.json();
+                throw new Error(errorData.detail || 'Analysis failed');
+            }
+
+            const result = await response.json();
+            
+            // Store results and input for the analysis page
+            localStorage.setItem('verinews_latest_result', JSON.stringify(result));
+            localStorage.setItem('verinews_latest_input', input);
+
+            // Redirect to analysis report
+            window.location.href = '/analysis';
+
+        } catch (error) {
+            console.error('Error:', error);
+            alert("STATION ERROR: " + error.message);
+        } finally {
+            verifyButton.disabled = false;
+            verifyButton.innerHTML = originalContent;
+            verifyButton.classList.remove('opacity-50');
+        }
+    });
+
+    // Paste button functionality
+    document.querySelectorAll('button').forEach(btn => {
+        if (btn.innerText.trim() === 'PASTE') {
+            btn.addEventListener('click', async () => {
+                try {
+                    const text = await navigator.clipboard.readText();
+                    articleInput.value = text;
+                } catch (err) {
+                    console.error('Failed to read clipboard', err);
+                }
+            });
+        }
+    });
+</script>
+</body></html>

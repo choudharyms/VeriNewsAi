@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&amp;family=Space+Grotesk:wght@300..700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-container-low": "#fcf9ee",
+              "on-tertiary-fixed": "#000000",
+              "on-error": "#ffffff",
+              "secondary-container": "#ffdbc9",
+              "on-surface-variant": "#656555",
+              "inverse-primary": "#ffffff",
+              "on-error-container": "#742410",
+              "secondary-fixed": "#ffdbc9",
+              "error": "#a54731",
+              "surface-tint": "#5f5e5e",
+              "tertiary": "#aa4243",
+              "error-dim": "#5c1202",
+              "on-background": "#38392b",
+              "primary-fixed": "#e4e2e1",
+              "on-secondary": "#ffffff",
+              "surface-dim": "#e5e4cd",
+              "surface-container-highest": "#eae9d5",
+              "inverse-surface": "#0e0e0a",
+              "secondary": "#9a511e",
+              "tertiary-container": "#f37978",
+              "on-tertiary-container": "#490008",
+              "on-tertiary-fixed-variant": "#5a040f",
+              "surface-container": "#f6f4e5",
+              "outline": "#828171",
+              "outline-variant": "#bbbaa7",
+              "primary": "#5f5e5e",
+              "primary-fixed-dim": "#d6d4d3",
+              "surface-variant": "#eae9d5",
+              "inverse-on-surface": "#9f9d95",
+              "error-container": "#fe8b70",
+              "on-primary-container": "#525151",
+              "surface-container-high": "#f0efdd",
+              "primary-dim": "#535252",
+              "on-secondary-container": "#833f0c",
+              "tertiary-fixed": "#f37978",
+              "on-tertiary": "#ffffff",
+              "surface": "#feffd6",
+              "on-primary-fixed": "#3f3f3f",
+              "on-primary": "#faf7f6",
+              "on-primary-fixed-variant": "#5c5b5b",
+              "surface-container-lowest": "#ffffff",
+              "tertiary-dim": "#9a3638",
+              "on-surface": "#38392b",
+              "surface-bright": "#feffd6",
+              "on-secondary-fixed": "#6a2e00",
+              "tertiary-fixed-dim": "#e26c6c",
+              "on-secondary-fixed-variant": "#8f4816",
+              "primary-container": "#e4e2e1",
+              "secondary-dim": "#8b4513",
+              "secondary-fixed-dim": "#ffc9ab",
+              "background": "#feffd6"
+            },
+            fontFamily: {
+              "headline": ["Newsreader", "serif"],
+              "body": ["Space Grotesk", "sans-serif"],
+              "label": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+        .noise-texture {
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.04;
+            pointer-events: none;
+        }
+        .ink-bleed {
+            background: linear-gradient(90deg, transparent 0%, #9a511e 50%, transparent 100%);
+            height: 2px;
+            opacity: 0.3;
+        }
+        .paper-stack {
+            box-shadow: 4px 4px 0px 0px #eae9d5, 8px 8px 0px 0px #d6d4d3;
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface selection:bg-secondary-container relative overflow-x-hidden min-h-screen">
+<div class="fixed inset-0 noise-texture z-[100]"></div>
+<!-- Top Navigation Shell -->
+<header class="w-full border-b-4 border-double border-[#bbbaa7] bg-[#feffd6] dark:bg-[#38392b] relative z-50">
+<nav class="flex justify-between items-center px-12 py-6 w-full max-w-screen-2xl mx-auto font-serif uppercase tracking-widest Newsreader">
+<a class="text-3xl font-black text-[#38392b] dark:text-[#feffd6] italic uppercase border-2 border-[#38392b] px-4 py-1 rotate-[-1deg] cursor-pointer hover:opacity-80 transition-opacity" href="/">
+                VeriNewsAI
+            </a>
+<div class="hidden md:flex items-center gap-10 text-[#5f5e5e] dark:text-[#eae9d5]">
+<a class="text-[#9a511e] dark:text-[#ffc9ab] underline decoration-wavy underline-offset-8 hover:italic transition-all duration-75" href="/archive">The Archive</a>
+<a class="text-[#5f5e5e] dark:text-[#bbbaa7] hover:text-[#38392b] hover:italic transition-all duration-75" href="/">Verify</a>
+<a class="text-[#5f5e5e] dark:text-[#bbbaa7] hover:text-[#38392b] hover:italic transition-all duration-75" href="#">Wire Service</a>
+<a class="text-[#5f5e5e] dark:text-[#bbbaa7] hover:text-[#38392b] hover:italic transition-all duration-75" href="#">Classifieds</a>
+</div>
+<div class="flex items-center gap-6">
+<span class="material-symbols-outlined text-on-surface cursor-pointer opacity-80" data-icon="search">search</span>
+<button class="bg-secondary text-on-secondary px-6 py-2 rounded-sm font-label uppercase text-sm tracking-widest hover:italic transition-all duration-75">Dispatch</button>
+</div>
+</nav>
+</header>
+<main class="max-w-screen-2xl mx-auto px-12 py-16 flex flex-col gap-12">
+<!-- Header & Filter Section -->
+<section class="flex flex-col md:flex-row justify-between items-end gap-8 border-b-2 border-outline-variant pb-8 border-dotted">
+<div class="max-w-2xl">
+<span class="font-mono text-secondary uppercase tracking-[0.3em] text-xs mb-2 block">Central Intelligence Repository</span>
+<h1 class="text-6xl font-headline font-black text-on-surface italic leading-tight">The Filing Cabinet</h1>
+<p class="text-on-surface-variant font-body max-w-md mt-4 leading-relaxed">
+                    Physical records of all automated truth-checks processed through the VeriNewsAI engine since its commissioning in 2026.
+                </p>
+</div>
+<!-- Typewriter Filter Keys -->
+<div class="flex flex-col gap-4">
+<span class="font-mono text-xs text-outline uppercase self-end">Filter by Period</span>
+<div class="flex gap-2">
+<button class="w-12 h-12 rounded-full border-2 border-outline flex items-center justify-center bg-surface-container-high hover:bg-surface-container-highest transition-colors shadow-sm active:translate-y-0.5">
+<span class="font-mono text-sm font-bold">26</span>
+</button>
+<button class="w-12 h-12 rounded-full border-2 border-outline flex items-center justify-center bg-surface-container-high hover:bg-surface-container-highest transition-colors shadow-sm active:translate-y-0.5">
+<span class="font-mono text-sm font-bold">25</span>
+</button>
+<button class="w-12 h-12 rounded-full border-2 border-outline flex items-center justify-center bg-surface-container-high hover:bg-surface-container-highest transition-colors shadow-sm active:translate-y-0.5">
+<span class="font-mono text-sm font-bold">24</span>
+</button>
+<button class="w-12 h-12 rounded-full border-4 border-secondary flex items-center justify-center bg-surface-container-highest shadow-inner">
+<span class="font-mono text-sm font-bold text-secondary">ALL</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Archive Grid (The Filing Cabinet) -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+<!-- Index Card 1 -->
+<article class="bg-surface-container-lowest p-8 border border-outline-variant paper-stack relative overflow-hidden group hover:-translate-y-1 transition-transform cursor-pointer">
+<div class="absolute top-4 right-4 text-[0.6rem] font-mono text-outline uppercase tracking-tighter">REF-ID: 882-AX</div>
+<div class="mb-6">
+<span class="font-mono text-[10px] bg-surface-container-highest px-2 py-0.5 text-on-surface-variant uppercase">Politics</span>
+<h2 class="text-2xl font-headline font-bold mt-2 leading-tight">The Monsoon Protocol: Claims of Weather Engineering in Bombay</h2>
+<p class="font-mono text-xs text-outline mt-1 uppercase tracking-tighter">Dated: August 14, 2026</p>
+</div>
+<div class="ink-bleed my-6"></div>
+<div class="flex justify-between items-center">
+<div class="border-2 border-error text-error text-[10px] font-black uppercase px-2 py-1 rotate-[-12deg] tracking-widest opacity-80">
+                        Fabricated
+                    </div>
+<span class="material-symbols-outlined text-outline" data-icon="description">description</span>
+</div>
+</article>
+<!-- Index Card 2 -->
+<article class="bg-surface-container-lowest p-8 border border-outline-variant paper-stack relative overflow-hidden group hover:-translate-y-1 transition-transform cursor-pointer">
+<div class="absolute top-4 right-4 text-[0.6rem] font-mono text-outline uppercase tracking-tighter">REF-ID: 901-BZ</div>
+<div class="mb-6">
+<span class="font-mono text-[10px] bg-surface-container-highest px-2 py-0.5 text-on-surface-variant uppercase">Technology</span>
+<h2 class="text-2xl font-headline font-bold mt-2 leading-tight">Mechanical Brains: The Future of Automation in Cotton Mills</h2>
+<p class="font-mono text-xs text-outline mt-1 uppercase tracking-tighter">Dated: July 22, 2026</p>
+</div>
+<div class="ink-bleed my-6"></div>
+<div class="flex justify-between items-center">
+<div class="border-2 border-secondary text-secondary text-[10px] font-black uppercase px-2 py-1 rotate-[8deg] tracking-widest opacity-80">
+                        Verified
+                    </div>
+<span class="material-symbols-outlined text-outline" data-icon="verified">verified</span>
+</div>
+<!-- Confidential Overlay -->
+<div class="absolute inset-0 bg-on-surface/5 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
+<span class="border-4 border-on-surface/20 text-on-surface/20 text-4xl font-black uppercase rotate-[-25deg] tracking-[0.5em] px-4">CONFIDENTIAL</span>
+</div>
+</article>
+<!-- Index Card 3 -->
+<article class="bg-surface-container-lowest p-8 border border-outline-variant paper-stack relative overflow-hidden group hover:-translate-y-1 transition-transform cursor-pointer">
+<div class="absolute top-4 right-4 text-[0.6rem] font-mono text-outline uppercase tracking-tighter">REF-ID: 112-QC</div>
+<div class="mb-6">
+<span class="font-mono text-[10px] bg-surface-container-highest px-2 py-0.5 text-on-surface-variant uppercase">Aviation</span>
+<h2 class="text-2xl font-headline font-bold mt-2 leading-tight">Air-India's Constellation Fleet to Cross the Atlantic</h2>
+<p class="font-mono text-xs text-outline mt-1 uppercase tracking-tighter">Dated: June 05, 2026</p>
+</div>
+<div class="ink-bleed my-6"></div>
+<div class="flex justify-between items-center">
+<div class="border-2 border-secondary text-secondary text-[10px] font-black uppercase px-2 py-1 rotate-[-5deg] tracking-widest opacity-80">
+                        Verified
+                    </div>
+<span class="material-symbols-outlined text-outline" data-icon="flight">flight</span>
+</div>
+</article>
+<!-- Index Card 4 -->
+<article class="bg-surface-container-lowest p-8 border border-outline-variant paper-stack relative overflow-hidden group hover:-translate-y-1 transition-transform cursor-pointer">
+<div class="absolute top-4 right-4 text-[0.6rem] font-mono text-outline uppercase tracking-tighter">REF-ID: 443-XP</div>
+<div class="mb-6">
+<span class="font-mono text-[10px] bg-surface-container-highest px-2 py-0.5 text-on-surface-variant uppercase">Health</span>
+<h2 class="text-2xl font-headline font-bold mt-2 leading-tight">The Miracle Tonic: Allegations of Synthetic Quinine Scams</h2>
+<p class="font-mono text-xs text-outline mt-1 uppercase tracking-tighter">Dated: May 18, 2026</p>
+</div>
+<div class="ink-bleed my-6"></div>
+<div class="flex justify-between items-center">
+<div class="border-2 border-error text-error text-[10px] font-black uppercase px-2 py-1 rotate-[15deg] tracking-widest opacity-80">
+                        Fabricated
+                    </div>
+<span class="material-symbols-outlined text-outline" data-icon="medical_services">medical_services</span>
+</div>
+</article>
+<!-- Index Card 5 -->
+<article class="bg-surface-container-lowest p-8 border border-outline-variant paper-stack relative overflow-hidden group hover:-translate-y-1 transition-transform cursor-pointer lg:col-span-1">
+<div class="absolute top-4 right-4 text-[0.6rem] font-mono text-outline uppercase tracking-tighter">REF-ID: 671-MK</div>
+<div class="mb-6">
+<span class="font-mono text-[10px] bg-surface-container-highest px-2 py-0.5 text-on-surface-variant uppercase">Space</span>
+<h2 class="text-2xl font-headline font-bold mt-2 leading-tight">The Moon Landing of 1952: A Detailed Exposure</h2>
+<p class="font-mono text-xs text-outline mt-1 uppercase tracking-tighter">Dated: April 02, 2026</p>
+</div>
+<div class="ink-bleed my-6"></div>
+<div class="flex justify-between items-center">
+<div class="border-2 border-error text-error text-[10px] font-black uppercase px-2 py-1 rotate-[-8deg] tracking-widest opacity-80">
+                        Fabricated
+                    </div>
+<span class="material-symbols-outlined text-outline" data-icon="rocket">rocket</span>
+</div>
+</article>
+<!-- Special Folder / Teaser -->
+<div class="bg-surface-dim p-8 border-2 border-dashed border-outline-variant flex flex-col items-center justify-center text-center gap-4">
+<span class="material-symbols-outlined text-4xl text-outline" data-icon="folder_zip">folder_zip</span>
+<h3 class="font-headline text-xl font-bold uppercase italic">Request Archive Deep-Dive</h3>
+<p class="text-xs font-mono uppercase">Access restricted to Editorial Board Members only.</p>
+<button class="mt-4 border border-on-surface px-6 py-2 font-mono text-xs hover:bg-on-surface hover:text-surface transition-colors">AUTHENTICATE</button>
+</div>
+</section>
+<!-- Asymmetric Ledger Section -->
+<section class="mt-12 bg-surface-container p-12 flex flex-col md:flex-row gap-16 border-x-[1rem] border-surface-container-highest">
+<div class="flex-1 order-2 md:order-1">
+<img alt="Modern archive center" class="w-full h-96 object-cover grayscale sepia-[0.3] brightness-90 shadow-2xl rotate-[-1deg] border-4 border-surface" data-alt="Black and white photo of a 2020s server room with filing cabinet aesthetics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl3P1cCham4WHb5fUIzkO85Fk-QR5Fu7izbWmnzefX-SJui-_UDqhr5tAp9SoytyaIOPs2cNCcvz1I4yaZ8cB6sC0tKBOTx3Yj7psu6sBtIj0JotlF_bBDMBW6fZHASmlFXRvZaGEUDq713JfsxPi8kQrHgkeJu7kJeLMzZZfkc_A-nFNn4KZuPTNArYZr7XcUmhV0oWUNrx-VIWJFEMv2au123IldiLjQhVJi96uPYVtnZzBmdy10Y-q4ZpAp4sMf6uZ7sLEY4zE"/>
+<div class="mt-4 font-mono text-[10px] text-outline text-right">FIG 1.2: MAIN REPOSITORY WING B</div>
+</div>
+<div class="flex-1 order-1 md:order-2 space-y-8">
+<h2 class="text-4xl font-headline font-extrabold italic text-on-surface leading-tight">The Methodology of Automated Truth</h2>
+<div class="space-y-6 text-on-surface-variant font-body leading-relaxed">
+<p>Each index card in this archive represents a multi-stage verification process. Our AI engine cross-references wire service feeds against historical ledgers and real-time physical telemetry.</p>
+<ul class="space-y-4 font-mono text-xs uppercase">
+<li class="flex items-center gap-4">
+<span class="w-2 h-2 bg-secondary rounded-full"></span>
+                            Semantic Analysis of Source Material
+                        </li>
+<li class="flex items-center gap-4">
+<span class="w-2 h-2 bg-secondary rounded-full"></span>
+                            Cross-Verification with State Records
+                        </li>
+<li class="flex items-center gap-4">
+<span class="w-2 h-2 bg-secondary rounded-full"></span>
+                            Final Review by Mechanical Logic Units
+                        </li>
+</ul>
+<div class="pt-6">
+<a class="text-secondary font-bold underline decoration-1 underline-offset-4 hover:italic" href="#">Learn more about the Pressroom Standards →</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer Shell -->
+<footer class="w-full border-t-8 border-double border-[#38392b] mt-20 bg-[#fcf9ee] dark:bg-[#2a2b21] relative z-50">
+<div class="flex flex-col items-center gap-6 py-12 px-8 w-full border-x-[1rem] border-[#eae9d5] max-w-screen-2xl mx-auto">
+<div class="text-lg font-bold text-[#5f5e5e] font-mono tracking-tighter">VERINEWSAI PRESS</div>
+<div class="flex flex-wrap justify-center gap-10 font-mono text-xs uppercase tracking-tighter Space Grotesk">
+<a class="text-[#828171] hover:text-[#38392b] hover:underline decoration-1" href="#">Editorial Policy</a>
+<a class="text-[#828171] hover:text-[#38392b] hover:underline decoration-1" href="#">Terms of Service</a>
+<a class="text-[#828171] hover:text-[#38392b] hover:underline decoration-1" href="#">Archive Access</a>
+<a class="text-[#828171] hover:text-[#38392b] hover:underline decoration-1" href="#">Contact Editor</a>
+</div>
+<p class="text-[10px] font-mono uppercase tracking-tighter text-[#38392b] opacity-60 text-center max-w-md leading-loose">
+                © 2026 THE VERINEWSAI PRESS - ALL RIGHTS RESERVED - PRINTED IN BOMBAY - AUTHORIZED BY THE CENTRAL BUREAU OF TRUTH
+            </p>
+</div>
+</footer>
+<!-- Floating Action Button (Contextual for Home) -->
+<!-- Suppressed on Archive per Filter rules -->
+</body></html>

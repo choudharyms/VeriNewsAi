@@ -1,0 +1,13 @@
+venv/
+__pycache__/
+*.pyc
+.env
+*.log
+debug_app_verifier.py
+find_working_model.py
+full_debug_log.txt
+verifier_error.log
+verinews_direct_debug.log
+node_modules/
+dist/
+.DS_Store
